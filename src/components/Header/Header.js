@@ -7,7 +7,7 @@ import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import { makeStyles } from '@material-ui/styles';
 import classes from './Header.css';
 import logo from '../../images/logo.png';
-import { Container, Row } from 'react-bootstrap';
+import { Container, Row,Col, Nav } from 'react-bootstrap';
 
 
 const useStyles = makeStyles({
@@ -27,20 +27,22 @@ const Header = () => {
 
   return (
     <div >
-      <Container spacing={1}>
+      <Container fluid st>
         <Row>
-      <Grid container spacing={1}>
-        <Grid item xs={12}>
-          <AppBar style={{ backgroundColor: '#3E4071', paddingLeft: '2rem', paddingRight: '2rem' }}>
-            <Toolbar>
-              <Grid container>
-                <Grid container item xs={7} align="left" >
+          <AppBar >
 
-                  <Grid item xs={3} >
+            <Row style={{ backgroundColor: '#22303C' }}>
+            <Toolbar>
+
+
+                <Col xs={7} >
+
+                  <Row>
+                  <Col xs={3} >
                     <img src={logo} style={{ width: '90%', height: '4rem' }} />
-                  </Grid>
-                  {/* */}
-                  <Grid item xs={9}>
+                  </Col>
+
+                  <Col xs={9}>
 
                     <TextField fullWidth size="small"
                       placeholder="Search for Movies, Events, Plays, Sports and Activities"
@@ -53,12 +55,13 @@ const Header = () => {
 
                         }
                       }} />
-                  </Grid>
+                  </Col>
+                  </Row>
 
-                </Grid>
+                </Col>
 
 
-                <Grid item xs={5} align="right" >
+                <Col xs={5} align="right" >
 
                   <Button
                     size="small"
@@ -85,25 +88,69 @@ const Header = () => {
                     justifyContent: 'right', position: 'relative'
                   }}><MenuIcon fontSize="large" style={{ color: 'white', fontSize: '3rem' }} /></IconButton>
 
-                </Grid>
+                </Col>
 
-              </Grid>
             </Toolbar>
+            </Row>
+
+            <Row style={{ backgroundColor: '#DC143C',paddingLeft: '1.5rem',paddingRight: '1.5rem'}}>
+                    <Col xs={6}>
+                    <Nav >
+
+                        <Nav.Item as="li" >
+                            <Nav.Link href="/" style={{color: 'white'}}> <h5>Movies</h5> </Nav.Link>
+                        </Nav.Item>
+                        <Nav.Item as="li">
+                            <Nav.Link href="/" style={{color: 'white'}}> <h5>Stream</h5> </Nav.Link>
+                        </Nav.Item>
+                        <Nav.Item as="li">
+                            <Nav.Link href="/" style={{color: 'white'}}> <h5>Event</h5> </Nav.Link>
+                        </Nav.Item>
+                        <Nav.Item as="li">
+                            <Nav.Link href="/" style={{color: 'white'}}> <h5>Plays</h5> </Nav.Link>
+                        </Nav.Item>
+                        <Nav.Item as="li">
+                            <Nav.Link href="/" style={{color: 'white'}}> <h5>Sport</h5> </Nav.Link>
+                        </Nav.Item>
+                        <Nav.Item as="li">
+                            <Nav.Link href="/" style={{color: 'white'}}> <h5>Activities</h5> </Nav.Link>
+                        </Nav.Item>
+                        <Nav.Item as="li">
+                            <Nav.Link href="/" style={{color: 'white'}}> <h5>Buzz</h5> </Nav.Link>
+                        </Nav.Item>
+
+                    </Nav>
+                    </Col>
+
+                    <Col xs={6}>
+                    <Nav className="justify-content-end">
+
+                        <Nav.Item as="li">
+                            <Nav.Link href="/" style={{color: 'white'}}> <h5>ListYourShow</h5> </Nav.Link>
+                        </Nav.Item>
+                        <Nav.Item as="li">
+                            <Nav.Link href="/" style={{color: 'white'}}> <h5>Corporates</h5> </Nav.Link>
+                        </Nav.Item>
+                        <Nav.Item as="li">
+                            <Nav.Link href="/" style={{color: 'white'}}> <h5>Offers</h5> </Nav.Link>
+                        </Nav.Item>
+                        <Nav.Item as="li">
+                            <Nav.Link href="/" style={{color: 'white'}}> <h5>Gift Cards</h5> </Nav.Link>
+                        </Nav.Item>
+
+                    </Nav>
+                    </Col>
+                </Row>
+
+
           </AppBar>
-        </Grid>
-
-        <Grid item xs={12}>
-                    <h1>Testing</h1>
-                </Grid>
-      </Grid>
+ 
       </Row>
-
-      <Row style={{backgroundColor:'red'}}>
-          <h1>kjhjkh</h1>
-        </Row>
+     
       </Container>
     </div>
   )
 }
 
 export default Header
+
