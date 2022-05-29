@@ -27,7 +27,7 @@ const Header = () => {
 
   return (
     <div >
-      <Container fluid st>
+      <Container fluid >
         <Row>
           <AppBar >
 
