@@ -22,7 +22,7 @@ function Homepage() {
                 </Row>
 
                 <Row style={{ marginTop: '11rem' }}>
-                    <Carousel variant="dark" style={{ height: '30rem' }}>
+                    <Carousel variant="dark" style={{ height: '30rem'}}>
                         <Carousel.Item>
                             <img
                                 className="d-block w-100"

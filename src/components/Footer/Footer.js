@@ -11,10 +11,16 @@ import twitterLogo from '../../images/twitter-logo.png';
 const Footer = () => {
   return (
     <div style={{ backgroundColor: '#22303C'}}>
-      <Row style={{margin:'3rem'}}>
+      <Row style={{marginLeft:'1rem',marginRight:'1rem',marginTop:'5rem',marginBottom:'2rem'}}>
       <Row >
-        <Col>
-        <img src={logo} style={{ width: '15%', height: '4rem' }} />
+        <Col xs={5} >
+        <hr style={{marginTop:'2rem',color: 'white', fontWeight: 'bold' }}></hr>
+        </Col>
+        <Col xs={2}>
+        <img src={logo} style={{ width: '90%', height: '4rem' }} />
+        </Col>
+        <Col xs={5}>
+        <hr style={{marginTop:'2rem',color: 'white', fontWeight: 'bold' }}></hr>
         </Col>
       </Row>
 
@@ -29,6 +35,13 @@ const Footer = () => {
             <td><img src={linkedinLogo} style={{ width: '5rem'}} /></td>
           </tr>
         </Table>
+      </Row>
+
+      <Row>
+        <h4 style={{color: '#808080'}}>Copyright 2022 © Bigtree Entertainment Pvt.Ltd. All Rights Reserved.</h4>
+        <h4 style={{color: '#808080'}}>The content and images used on this site are copyright protected vests 
+        with the respective owners. The usage of the content and images on this website is intended to promote the 
+        works and no endorsement of the artist shall be implied.Unauthorized use is prohibited and punishable by law.</h4>
       </Row>
 
       </Row>
